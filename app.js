@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/Shopgaubong')
+mongoose.connect('mongodb+srv://root:123456789a@cluster0.uhpjlrs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
