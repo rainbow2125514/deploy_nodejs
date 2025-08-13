@@ -44,7 +44,7 @@ def chatbot_reply(message: str) -> dict:
         result = []
         for p in matched_products[:4]:
             images = p.get("images", [])
-            image_url = f"http://api.mimibear.id.vn/images/{images[0]}" if images else None
+            image_url = f"https://deploy-nodejs-4u6l.onrender.com/images/{images[0]}" if images else None
             variants = list(variants_collection.find({"productId": p["_id"]}))
             sizes = []
             prices = []
@@ -79,7 +79,7 @@ def chatbot_reply(message: str) -> dict:
                 result = []
                 for p in prods:
                     images = p.get("images", [])
-                    image_url = f"http://api.mimibear.id.vn/images/{images[0]}" if images else None
+                    image_url = f"https://deploy-nodejs-4u6l.onrender.com/images/{images[0]}" if images else None
                     variants = list(variants_collection.find({"productId": p["_id"]}))
                     sizes = []
                     prices = []
@@ -112,7 +112,7 @@ def chatbot_reply(message: str) -> dict:
                 result = []
                 for p in prods:
                     images = p.get("images", [])
-                    image_url = f"http://api.mimibear.id.vn/images/{images[0]}" if images else None
+                    image_url = f"https://deploy-nodejs-4u6l.onrender.com/images/{images[0]}" if images else None
                     variants = list(variants_collection.find({"productId": p["_id"]}))
                     sizes = []
                     prices = []

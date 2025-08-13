@@ -14,7 +14,7 @@ const momoPartnerCode = "MOMOYS4Y20250609";
 const momoAccessKey = "RHUgLUY2qTrOvKBz";
 const momoSecretKey = "4Vf1eeXWH0DqBN7IzDvKePIGMPb4fk2m";
 const momoRedirectUrl = "http://localhost:3007/checkout/momo/return";
-const momoIpnUrl = "http://api.mimibear.id.vn/payment/payment-ipn";
+const momoIpnUrl = "https://deploy-nodejs-4u6l.onrender.com/payment/payment-ipn";
 
 // ====== MOMO ROUTE ======
 router.post("/momo", authenticateToken, async (req, res) => {

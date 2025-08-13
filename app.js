@@ -57,7 +57,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
   clientID: process.env.GOOGLE_CLIENT_ID,
   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-  callbackURL: "http://api.mimibear.id.vn/users/auth/google/callback"
+  callbackURL: "https://deploy-nodejs-4u6l.onrender.com/users/auth/google/callback"
 },
 async (_accessToken, _refreshToken, profile, done) => {
   let user = await User.findOne({ googleId: profile.id });
@@ -108,7 +108,7 @@ app.use('/vouchers', vouchersRouter);
 
 // không cần token khi thanh toán momo
 app.use("/payment", paymentRouter);
-// app.use("/", paymentReturnRouter); // Để route /payment-return hoạt động tại http://api.mimibear.id.vn/payment-return
+// app.use("/", paymentReturnRouter); // Để route /payment-return hoạt động tại https://deploy-nodejs-4u6l.onrender.com/payment-return
 // 
 app.use('/favorites', favoriteRouter);
 // thanh toán
